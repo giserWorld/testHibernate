@@ -1,0 +1,41 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<!-- hibernate环境配置 -->
+<hibernate-configuration>
+
+	<!-- 1.session-factory配置 -->
+	<session-factory>
+	    <!-- 数据库驱动 -->
+	    <property name="hibernate.connection.driver_class">
+	        org.postgresql.Driver
+	    </property>
+	    
+	    <!-- 数据库URL地址 -->
+	    <property name="hibernate.connection.url">
+	        jdbc:postgresql://localhost:5432/javadb?characterEncoding=utf-8
+	    </property>
+	    
+	    <!-- 用户名 -->
+	    <property name="hibernate.connection.username">postgres</property>
+	    <!-- 密码 -->
+	    <property name="hibernate.connection.password">123456</property>
+	
+	 	<!-- Hibernate的方言：生成SQL语句的规则 -->
+	    <property name="hibernate.dialect">
+	        org.hibernate.dialect.PostgreSQLDialect
+	    </property>
+	    
+	    <!-- 是否将所有生成的SQL打印到控制台 -->
+	    <property name="show_sql">true</property>
+	    
+	    <!-- 是否格式化SQL语句 -->
+	    <property name="format_sql">true</property>
+	    
+	    <!-- 注册java实体映射文件(java类属性与表colum映射) -->
+	    <mapping resource="mapper/Employee.hbm.xml" />
+	    
+	</session-factory>
+	
+</hibernate-configuration>

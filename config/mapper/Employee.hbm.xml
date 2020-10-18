@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<!-- hibernate对象关系映射文件 -->
+<hibernate-mapping package="com.domain">
+	
+	<!-- hibernate.com.test.entity包下的javaBean与db_table映射 -->
+    <class name="Employee" table="tb_employee">
+        
+        <!-- 1.pk主键映射 -->
+        <id name="id" column="id">
+        	<!-- 1.hibernate主键生成器策略,默认序列名为"hibernate_sequence",必须创建该序列 -->
+        	<!-- <generator class="native"></generator> -->
+        	
+        	<!-- 2.自定义的sequence序列，推荐 -->
+        	<generator class="sequence">
+        		<param name="sequence">tb_employee_seq</param>
+        	</generator>
+        </id>
+        
+        <!-- 2.普通属性映射,如果name值与column字段一样，可忽略 column属性设置-->
+        <property name="name" column="name"/>
+        <property name="email" column="email"/>
+        <property name="hiredate" column="hiredate"/>
+        
+    </class>
+    
+</hibernate-mapping>

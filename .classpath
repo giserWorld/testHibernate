@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="config"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
 		<attributes>
 			<attribute name="owner.project.facets" value="java"/>
@@ -19,5 +20,15 @@
 			<attribute name="owner.project.facets" value="jst.web.jstl"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-commons-annotations-4.0.4.Final.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-core-4.3.5.Final.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jandex-1.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/javassist-3.18.1-GA.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jboss-logging-3.1.4.GA.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jboss-logging-annotations-1.2.0.Beta1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/postgresql-9.2-1004.jdbc41.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>
