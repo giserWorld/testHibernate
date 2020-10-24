@@ -8,10 +8,20 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 import com.domain.Employee;
-
+import com.domain.util.MySessionFactory;
 //测试类
 public class TestMain {
 	public static void main(String[] args) {
+		//sessionAPI_save();//api_save();
+		SessionFactory sessionFactory=MySessionFactory.getSessionFactory();//获取sessionFactory
+		Session session = sessionFactory.openSession();
+		Employee obj = (Employee)session.load(Employee.class,2);
+		session.close();
+	}
+
+	
+	//1.插入数据(insert)
+	private static void sessionAPI_save() {
 		//1.读取hibernate配置文件(从hibernate.cfg.xml文件中自动读取配置)
 		Configuration config=new Configuration().configure("hibernate.cfg.xml");
 		
