@@ -33,6 +33,9 @@
 	    <!-- 是否格式化SQL语句 -->
 	    <property name="format_sql">true</property>
 	    
+	    <!-- 配置可以使用getCurrentSession() -->
+	    <property name="current_session_context_class">thread</property>
+	    
 	    <!-- 注册java实体映射文件(java类属性与表colum映射) -->
 	    <mapping resource="mapper/Employee.hbm.xml" />
 	    

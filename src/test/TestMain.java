@@ -8,14 +8,22 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 import com.domain.Employee;
-import com.domain.util.MySessionFactory;
+import com.util.MySessionFactory;
 //测试类
 public class TestMain {
 	public static void main(String[] args) {
-		//sessionAPI_save();//api_save();
+		sessionAPI_save();//api_save();
+		//sessionAPI_update();//api_update();
+	}
+
+	//2.更新数据(update)
+	private static void sessionAPI_update() {
 		SessionFactory sessionFactory=MySessionFactory.getSessionFactory();//获取sessionFactory
 		Session session = sessionFactory.openSession();
-		Employee obj = (Employee)session.load(Employee.class,2);
+		Transaction ts = session.beginTransaction();
+		Employee obj = (Employee) session.load(Employee.class,1);//获取实体对象
+		obj.setName("更新数据name2");
+		ts.commit();
 		session.close();
 	}
 

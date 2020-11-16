@@ -7,7 +7,7 @@
 <hibernate-mapping package="com.domain">
 	
 	<!-- hibernate.com.test.entity包下的javaBean与db_table映射 -->
-    <class name="Employee" table="tb_employee">
+    <class name="Employee" table="tb_employee" lazy="false">
         
         <!-- 1.pk主键映射 -->
         <id name="id" column="id">

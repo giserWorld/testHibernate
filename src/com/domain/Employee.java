@@ -1,9 +1,14 @@
 package com.domain;
 
+import java.io.Serializable;
 import java.util.Date;
 
 //Employee表实体类(javaBean/java实体类/pojo)
-public class Employee {
+public class Employee implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Integer id;
 	private String name;
 	private String email;
