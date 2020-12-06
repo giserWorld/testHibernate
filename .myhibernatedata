@@ -1,5 +1,5 @@
 #MyEclipse Hibernate Properties
-#Wed Nov 11 21:13:29 CST 2020
+#Wed Dec 02 23:13:05 CST 2020
 genBasicCompId=false
 sessionFactoryName=.HibernateSessionFactory
 profile=
@@ -10,7 +10,7 @@ reStrategyClass=
 detectO2O=false
 springDaoFile=
 useJavaTypes=true
-keyGenerator=sequence
+keyGenerator=foreign
 genVersionTag=false
 sessionFactoryId=
 basePersistenceClass=

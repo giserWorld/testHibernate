@@ -44,9 +44,9 @@ public class TestMain {
 		
 		//创建一个java对象
 		Employee empolyee1=new Employee();
-		empolyee1.setName("雇员1");
-		empolyee1.setEmail("602574436@qq.com");
-		empolyee1.setHiredate(new Date());
+		//empolyee1.setName("雇员1");
+		//empolyee1.setEmail("602574436@qq.com");
+		//empolyee1.setHiredate(new Date());
 		
 		//hibernate封装的"insert"的sql接口
 		sqlSession.save(empolyee1);

@@ -42,6 +42,10 @@
 		<mapping resource="com/domain/Student.hbm.xml" />
 		<mapping resource="com/domain/Course.hbm.xml" />
 		<mapping resource="com/domain/Studcourse.hbm.xml" />
+		<mapping resource="com/domain/Department.hbm.xml" />
+		<mapping resource="com/domain/Employee.hbm.xml" />
+		<mapping resource="com/domain/Person.hbm.xml" />
+		<mapping resource="com/domain/Idcard.hbm.xml" />
 	</session-factory>
 
 </hibernate-configuration>
